@@ -1,4 +1,4 @@
-.tip{
+.tip {
     font-size: 14px;
     font-family: 'Courier New', Courier, monospace;
     line-height: 2rem;
@@ -6,6 +6,8 @@
     top: 22%;
     left: 20%;
 }
+
+
 
 .container {
     width: 604px;
@@ -17,7 +19,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
 
 .item {

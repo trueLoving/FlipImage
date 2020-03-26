@@ -1,6 +1,35 @@
 // 获取图片对象
 var imgObj = document.getElementById("img");
 
+var src;
+
+// 图片加载失败钩子函数
+imgObj.onerror = function () {
+    alert("加载失败");
+    imgObj.src = src;
+}
+
+// /^(http|https)://([\w-]+\.)+[\w-]+(/[\w-./?%&=]*)?$/;
+function inputURL() {
+    // https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1585113325327&di=c47ffc4048e026d267f9324b6471f191&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fblog%2F201404%2F15%2F20140415204444_kfcMj.jpeg
+    var url = prompt("输入图片url");
+    src = imgObj.src;
+    imgObj.src = url;
+
+}
+
+function handleUploadPic(event) {
+
+    let file = event.target.files[0];
+
+    var reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = function (event) {
+        imgObj.src = event.target.result;
+    }
+
+}
+
 function imgUp() {
     imgObj.style.top == '200px' || !imgObj.style.top ? imgObj.style.top = '0px' : alert("已到达边界");
 }
@@ -27,5 +56,16 @@ document.onkeydown = function (event) {
         case 40: imgDown(); break;
         case 39: imgRight(); break;
     }
+}
 
+function imgRotate() {
+    imgObj.animate([
+        { transform: 'rotate(0deg)' },
+        { transform: 'rotate(180deg)' },
+        { transform: 'rotate(360deg)' }
+    ], {
+        duration: 2000,
+        iterationCount: 1,
+        fill: "forwards"
+    })
 }

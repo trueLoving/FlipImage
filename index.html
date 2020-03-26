@@ -16,10 +16,16 @@
         <div class="tip-item">左键 图片向左移动 </div>
         <div class="tip-item">右键 图片向右移动 </div>
         <hr>
+        <button type="button" onclick="document.getElementById('picture').click();">上传本地图片</button>
+        <input type="file" name="picture" id="picture" style="display: none;" onchange="handleUploadPic(event)">
+        <br>
+        <button type="button" onclick="inputURL()">输入图片URL路径</button>
+        <br>
+        <button type="button" onclick="imgRotate()">旋转图片360度</button>
     </div>
     <div class="container">
         <div class="item">
-            <img src="./img/01.jpg" id="img">
+            <img src="./img/01.jpg" id="img"/>
         </div>
         <div class="item"></div>
         <div class="item"></div>
