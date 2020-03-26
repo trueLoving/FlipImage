@@ -18,18 +18,25 @@
         <hr>
         <button type="button" onclick="document.getElementById('picture').click();">上传本地图片</button>
         <input type="file" name="picture" id="picture" style="display: none;" onchange="handleUploadPic(event)">
-        <br>
         <button type="button" onclick="inputURL()">输入图片URL路径</button>
-        <br>
         <button type="button" onclick="imgRotate()">旋转图片360度</button>
     </div>
     <div class="container">
         <div class="item">
-            <img src="./img/01.jpg" id="img" onclick="openImg()"/>
+            <img src="./img/01.jpg" id="img" onclick="openImg()" />
         </div>
         <div class="item"></div>
         <div class="item"></div>
         <div class="item"></div>
+    </div>
+    <div class="rotateOp">
+        <button type="button" onclick="imgRotateUp()">沿x轴向上旋转</button>
+        <br>
+        <button type="button" onclick="imgRotateDown()">沿x轴向下旋转</button>
+        <br>
+        <button type="button" onclick="imgRotateLeft()">沿y轴向左旋转</button>
+        <br>
+        <button type="button" onclick="imgRotateRight()">沿y轴向右旋转</button>
     </div>
     <div class="img-container" id="imgContainer" onclick="closeImg()">
         <img src="./img/01.jpg" alt="" id="imgContainerImg">

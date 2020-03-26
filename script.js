@@ -83,3 +83,51 @@ function openImg() {
 function closeImg() {
     imgContainer.style.display = 'none';
 }
+
+function imgRotateUp() {
+    imgObj.animate([
+        { transform: 'rotateX(0deg)' },
+        { transform: 'rotateX(180deg)' },
+        { transform: 'rotateX(360deg)' }
+    ], {
+        duration: 1000,
+        iterationCount: 1,
+        fill: 'forwards'
+    })
+}
+
+function imgRotateDown() {
+    imgObj.animate([
+        { transform: 'rotateX(0deg)' },
+        { transform: 'rotateX(-180deg)' },
+        { transform: 'rotateX(-360deg)' }
+    ], {
+        duration: 1000,
+        iterationCount: 1,
+        fill: 'forwards'
+    })
+}
+
+function imgRotateLeft() {
+    imgObj.animate([
+        { transform: 'rotateY(0deg)' },
+        { transform: 'rotateY(180deg)' },
+        { transform: 'rotateY(360deg)' }
+    ], {
+        duration: 1000,
+        iterationCount: 1,
+        fill: 'forwards'
+    })
+}
+
+function imgRotateRight() {
+    imgObj.animate([
+        { transform: 'rotateY(0deg)' },
+        { transform: 'rotateY(-180deg)' },
+        { transform: 'rotateY(-360deg)' }
+    ], {
+        duration: 1000,
+        iterationCount: 1,
+        fill: 'forwards'
+    })
+}

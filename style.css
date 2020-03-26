@@ -3,6 +3,19 @@
     padding: 0;
 }
 
+button {
+    display: block;
+    margin: 0.8em;
+    padding: 5px;
+    text-align: right;
+}
+
+.rotateOp {
+    position: absolute;
+    right: 18rem;
+    top: 12rem;
+}
+
 .tip {
     font-size: 14px;
     font-family: 'Courier New', Courier, monospace;
@@ -11,8 +24,6 @@
     top: 22%;
     left: 20%;
 }
-
-
 
 .container {
     width: 604px;
