@@ -57,30 +57,3 @@ img {
     position: relative;
     top: 19%;
 }
-
-.cha {
-    width: 20px;
-    height: 20px;
-    margin: auto;
-    position: relative;
-    cursor: pointer;
-}
-
-.cha::before,
-.cha::after {
-    content: "";
-    position: absolute;
-    height: 20px;
-    width: 1.5px;
-    top: -18.4rem;
-    right: 0.5rem;
-    background: white;
-}
-
-.cha::before {
-    transform: rotate(45deg);
-}
-
-.cha::after {
-    transform: rotate(-45deg);
-}
