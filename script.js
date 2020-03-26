@@ -1,7 +1,11 @@
 // 获取图片对象
 var imgObj = document.getElementById("img");
 
+var imgContainer = document.getElementById("imgContainer")
+
 var src;
+
+var imgContainerImg = document.getElementById("imgContainerImg");
 
 // 图片加载失败钩子函数
 imgObj.onerror = function () {
@@ -58,6 +62,7 @@ document.onkeydown = function (event) {
     }
 }
 
+
 function imgRotate() {
     imgObj.animate([
         { transform: 'rotate(0deg)' },
@@ -68,4 +73,13 @@ function imgRotate() {
         iterationCount: 1,
         fill: "forwards"
     })
+}
+
+function openImg() {
+    imgContainerImg.src = imgObj.src;
+    imgContainer.style.display = 'block';
+}
+
+function closeImg() {
+    imgContainer.style.display = 'none';
 }

@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 .tip {
     font-size: 14px;
     font-family: 'Courier New', Courier, monospace;
@@ -28,10 +33,54 @@
     border: 1px solid blanchedalmond;
 }
 
-img {
-    height: 200px;
-    width: 300px;
+#img {
+    height: 100%;
+    width: 100%;
     position: relative;
     left: 0px;
     top: 0px;
+    cursor: pointer;
+}
+
+.img-container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    z-index: 1000;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .5);
+    display: none;
+}
+
+img {
+    height: 60%;
+    position: relative;
+    top: 19%;
+}
+
+.cha {
+    width: 20px;
+    height: 20px;
+    margin: auto;
+    position: relative;
+    cursor: pointer;
+}
+
+.cha::before,
+.cha::after {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 1.5px;
+    top: -18.4rem;
+    right: 0.5rem;
+    background: white;
+}
+
+.cha::before {
+    transform: rotate(45deg);
+}
+
+.cha::after {
+    transform: rotate(-45deg);
 }
